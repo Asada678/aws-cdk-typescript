@@ -34,6 +34,7 @@ cdk deploy --parameters duration=8
 ## How to organize stacks?
 * create a CfnOutput to connect stack
 * LambdaFunction
+* cdk deploy PhotosStack
+* cdk deploy PhotosHandlerStack
 * 
-
-cdk deploy --all
+* cdk deploy --all
