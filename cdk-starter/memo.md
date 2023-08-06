@@ -2,11 +2,15 @@
 cdk —version
 
 mkdir sample-name
+
 cd sample-name
 
 cdk init —language=typescript
+
 cdk bootstrap
+
 cdk deploy
+
 cdk synth （only create template）
 
 ## CDK constructs
@@ -15,8 +19,11 @@ cdk synth （only create template）
 * L3 (combine multiple type resources)
 
 cdk list
+
 cdk diff
+
 cdk doctor
+
 cdk deploy --parameters duration=8
 
 ## Why the need for multiple stacks?
@@ -24,4 +31,9 @@ cdk deploy --parameters duration=8
 * Some stacks may take a lot of time for deployment or deletion
 *  Resources get big and the need organization
 
-How to organize stacks?
+## How to organize stacks?
+* create a CfnOutput to connect stack
+* LambdaFunction
+* 
+
+cdk deploy --all
