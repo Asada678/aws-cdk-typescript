@@ -24,4 +24,4 @@
 
 ## Debug
 
-`pnpm dlx ts-node  test/launcher.ts`
+`pnpm dlx ts-node test/launcher.ts`
