@@ -5,6 +5,7 @@ import {
   Context,
 } from "aws-lambda";
 import { postSpaces } from "./PostSpaces";
+import { getSpaces } from "./GetSpaces";
 
 // outside of handler, the resources can be reused
 const ddbClient = new DynamoDBClient({});
@@ -18,12 +19,11 @@ async function handler(
   try {
     switch (event.httpMethod) {
       case "GET":
-        message = "Hello from GET!";
-        break;
+        const getResponse = getSpaces(event, ddbClient);
+        return getResponse;
       case "POST":
-        const response = postSpaces(event, ddbClient);
-        return response;
-        break;
+        const postResponse = postSpaces(event, ddbClient);
+        return postResponse;
       default:
         break;
     }
