@@ -7,20 +7,21 @@ POST https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces
 Content-Type: application/json
 
   {
-    "location": "Japan"
+    "location": "Japan",
+    "name": "Good location"
   }
 ###
 
-GET https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=asada
+GET https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=d334386c-bd80-49a4-b69e-ef2c9f526ff0
 ###
 
-DELETE  https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=asada
+DELETE  https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=d334386c-bd80-49a4-b69e-ef2c9f526ff0
 ###
 
-PUT https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=asada
+PUT https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=d334386c-bd80-49a4-b69e-ef2c9f526ff0
 Content-Type: application/json
 
   {
-    "location": "Japan2"
+    "location": "Japan 3"
   }
 ###
