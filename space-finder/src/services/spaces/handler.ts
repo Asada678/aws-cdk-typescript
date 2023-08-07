@@ -8,7 +8,7 @@ import { postSpaces } from "./PostSpaces";
 import { getSpaces } from "./GetSpaces";
 import { updateSpace } from "./UpdateSpace";
 import { deleteSpace } from "./DeleteSpace";
-import { MissingFieldError } from "../shared/Validator";
+import { JsonError, MissingFieldError } from "../shared/Validator";
 
 // outside of handler, the resources can be reused
 const ddbClient = new DynamoDBClient({});
@@ -41,12 +41,18 @@ async function handler(
     if (error instanceof MissingFieldError) {
       return {
         statusCode: 400,
-        body: JSON.stringify(error.message),
+        body: error.message,
+      };
+    }
+    if (error instanceof JsonError) {
+      return {
+        statusCode: 400,
+        body: error.message,
       };
     }
     return {
       statusCode: 500,
-      body: JSON.stringify(error.message),
+      body: error.message,
     };
   }
   const response: APIGatewayProxyResult = {
