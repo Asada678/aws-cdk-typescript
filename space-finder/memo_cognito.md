@@ -6,3 +6,7 @@
 2. Identity pools
    1. Fine grained access control - a user assumes an identity
    2. Can directly call AWS SDK commands
+
+
+## verify user
+`aws cognito-idp admin-set-user-password --user-pool-id ap-northeast-1_WOb5qNeC7 --username username --password password --permanent`
