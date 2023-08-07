@@ -11,5 +11,13 @@ Content-Type: application/json
   }
 ###
 
-GET https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id
+GET https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=asada
+###
+
+PUT https://nsxbp5klbd.execute-api.ap-northeast-1.amazonaws.com/prod/spaces?id=asada
+Content-Type: application/json
+
+  {
+    "location": "Japan2"
+  }
 ###
