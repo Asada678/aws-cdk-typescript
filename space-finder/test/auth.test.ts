@@ -1,3 +1,4 @@
+import { ListBucketsCommand, S3Client } from "@aws-sdk/client-s3";
 import { AuthService } from "./AuthService";
 
 async function testAuth() {
@@ -7,7 +8,18 @@ async function testAuth() {
   // console.log(loginResult.getSignInUserSession().getIdToken().getJwtToken());
 
   const credentials = await service.generateTemporaryCredentials(loginResult);
-  console.log("credentials: ", credentials);
+  // console.log("credentials: ", credentials);
+  const buckets = await listBuckets(credentials);
+  console.log("buckets: ", buckets);
+}
+
+async function listBuckets(credentials: any) {
+  const client = new S3Client({
+    credentials,
+  });
+  const command = new ListBucketsCommand({});
+  const result = await client.send(command);
+  return result;
 }
 
 testAuth();
