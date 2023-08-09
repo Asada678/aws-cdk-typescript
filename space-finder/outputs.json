@@ -1,0 +1,15 @@
+{
+  "DataStack": {
+    "ExportsOutputRefSpacesTable8A9973559FB4B87D": "SpaceTable-0e779e6ed181",
+    "ExportsOutputFnGetAttSpacesTable8A997355Arn242927FE": "arn:aws:dynamodb:ap-northeast-1:157111492802:table/SpaceTable-0e779e6ed181"
+  },
+  "AuthStack": {
+    "ExportsOutputFnGetAttSpaceUserPool6AB542DCArnC2E21F85": "arn:aws:cognito-idp:ap-northeast-1:157111492802:userpool/ap-northeast-1_WOb5qNeC7",
+    "SpaceUserPoolId": "ap-northeast-1_WOb5qNeC7",
+    "SpaceUserPoolClientId": "46etr5vm7rhl1tstan2lrkm9r1",
+    "SpaceIdentityPoolId": "ap-northeast-1:4c6b4a06-9a32-452b-a3ce-a8f4a3240da5"
+  },
+  "LambdaStack": {
+    "ExportsOutputFnGetAttSpacesLambdaA5F923A4ArnE59FF2BB": "arn:aws:lambda:ap-northeast-1:157111492802:function:LambdaStack-SpacesLambdaA5F923A4-haGrWnYirXbQ"
+  }
+}

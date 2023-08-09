@@ -25,3 +25,5 @@
 ## Debug
 
 `pnpm dlx ts-node test/launcher.ts`
+
+`cdk deploy --all --outputs-file outputs.json`
