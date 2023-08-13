@@ -2,9 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import LoginComponent from "./components/LoginComponent";
+import { AuthService } from "./services/AuthService";
+
+const authService = new AuthService();
 
 function App() {
-  const [username] = useState<string | undefined>(undefined);
+  const [username, setUsername] = useState<string | undefined>(undefined);
 
   const router = createBrowserRouter([
     {
@@ -21,7 +25,7 @@ function App() {
         },
         {
           path: "/login",
-          element: <div>Hello login</div>,
+          element: <LoginComponent authService={authService} setUsernameCb={setUsername} />,
         },
         {
           path: "/profile",
