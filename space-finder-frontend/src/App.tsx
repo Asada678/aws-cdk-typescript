@@ -4,8 +4,11 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import LoginComponent from "./components/LoginComponent";
 import { AuthService } from "./services/AuthService";
+import { DataService } from "./services/DataService";
+import CreateSpace from "./components/spaces/CreateSpace";
 
 const authService = new AuthService();
+const dataService = new DataService();
 
 function App() {
   const [username, setUsername] = useState<string | undefined>(undefined);
@@ -33,7 +36,7 @@ function App() {
         },
         {
           path: "/createSpace",
-          element: <div>Hello createSpace</div>,
+          element: <CreateSpace dataService={dataService} />,
         },
         {
           path: "/spaces",
