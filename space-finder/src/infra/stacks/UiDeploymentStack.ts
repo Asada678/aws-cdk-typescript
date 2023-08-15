@@ -19,30 +19,29 @@ export class UiDeploymentStack extends Stack {
     });
 
     const uiDir = join(__dirname, "..", "..", "..", "..", "space-finder-frontend", "dist");
-    if (!existsSync(uiDir)) {
-      console.warn("UI dir not found: ", uiDir);
-      return;
+    if (existsSync(uiDir)) {
+      new BucketDeployment(this, "SpaceFinderDeployment", {
+        destinationBucket: deploymentBucket,
+        sources: [Source.asset(uiDir)],
+      });
+
+      const originIdentity = new OriginAccessIdentity(this, "OriginAccessIdentity");
+      deploymentBucket.grantRead(originIdentity);
+
+      const distribution = new Distribution(this, "SpaceFinderDistribution", {
+        defaultRootObject: "index.html",
+        defaultBehavior: {
+          origin: new S3Origin(deploymentBucket, {
+            originAccessIdentity: originIdentity,
+          }),
+        },
+      });
+
+      new CfnOutput(this, "SpaceFinderUrl", {
+        value: distribution.distributionDomainName,
+      });
+    } else {
+      console.warn("Ui directory not found: " + uiDir);
     }
-
-    new BucketDeployment(this, "SpaceFinderDeployment", {
-      destinationBucket: deploymentBucket,
-      sources: [Source.asset(uiDir)],
-    });
-
-    const originIdentity = new OriginAccessIdentity(this, "OriginAccessIdentity");
-    deploymentBucket.grantRead(originIdentity);
-
-    const distribution = new Distribution(this, "SpaceFinderDistribution", {
-      defaultRootObject: "index.html",
-      defaultBehavior: {
-        origin: new S3Origin(deploymentBucket, {
-          originAccessIdentity: originIdentity,
-        }),
-      },
-    });
-
-    new CfnOutput(this, "SpaceFinderUrl", {
-      value: distribution.distributionDomainName,
-    });
   }
 }

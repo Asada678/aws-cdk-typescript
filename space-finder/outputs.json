@@ -1,23 +1,23 @@
 {
-  "UiDeploymentStack": {
-    "SpaceFinderUrl": "d8yintrr3stpp.cloudfront.net"
-  },
   "DataStack": {
-    "ExportsOutputFnGetAttSpaceFinderPhotosE708E252Arn354BE01C": "arn:aws:s3:::space-finder-photos-0a9d0780bd3d",
-    "ExportsOutputRefSpacesTable8A9973559FB4B87D": "SpaceTable-0a9d0780bd3d",
-    "SpaceFinderPhotosBucketName": "space-finder-photos-0a9d0780bd3d",
-    "ExportsOutputFnGetAttSpacesTable8A997355Arn242927FE": "arn:aws:dynamodb:ap-northeast-1:157111492802:table/SpaceTable-0a9d0780bd3d"
+    "ExportsOutputFnGetAttSpaceFinderPhotosE708E252Arn354BE01C": "arn:aws:s3:::space-finder-photos-06074d0fe309",
+    "ExportsOutputRefSpacesTable8A9973559FB4B87D": "SpaceTable-06074d0fe309",
+    "SpaceFinderPhotosBucketName": "space-finder-photos-06074d0fe309",
+    "ExportsOutputFnGetAttSpacesTable8A997355Arn242927FE": "arn:aws:dynamodb:ap-northeast-1:157111492802:table/SpaceTable-06074d0fe309"
+  },
+  "UiDeploymentStack": {
+    "SpaceFinderUrl": "d3ho6zh6h0on1c.cloudfront.net"
   },
   "LambdaStack": {
-    "ExportsOutputFnGetAttSpacesLambdaA5F923A4ArnE59FF2BB": "arn:aws:lambda:ap-northeast-1:157111492802:function:LambdaStack-SpacesLambdaA5F923A4-RX1eYtyM6ORQ"
+    "ExportsOutputFnGetAttSpacesLambdaA5F923A4ArnE59FF2BB": "arn:aws:lambda:ap-northeast-1:157111492802:function:LambdaStack-SpacesLambdaA5F923A4-2Sdi8iaBJep9"
   },
   "AuthStack": {
-    "ExportsOutputFnGetAttSpaceUserPool6AB542DCArnC2E21F85": "arn:aws:cognito-idp:ap-northeast-1:157111492802:userpool/ap-northeast-1_YObRNjDL5",
-    "SpaceUserPoolId": "ap-northeast-1_YObRNjDL5",
-    "SpaceUserPoolClientId": "24flj2h28bqc59v1a7pvqtes2e",
-    "SpaceIdentityPoolId": "ap-northeast-1:48bf9444-f203-43df-a7e4-fe3752207a02"
+    "ExportsOutputFnGetAttSpaceUserPool6AB542DCArnC2E21F85": "arn:aws:cognito-idp:ap-northeast-1:157111492802:userpool/ap-northeast-1_K2BGlMI3s",
+    "SpaceUserPoolId": "ap-northeast-1_K2BGlMI3s",
+    "SpaceUserPoolClientId": "1f7mgjl5a7h8vj8pdtkemc7pv7",
+    "SpaceIdentityPoolId": "ap-northeast-1:52210c31-fd9a-4531-a800-627344aa1af7"
   },
   "ApiStack": {
-    "SpacesApiEndpoint36C4F3B6": "https://yi20jta5l0.execute-api.ap-northeast-1.amazonaws.com/prod/"
+    "SpacesApiEndpoint36C4F3B6": "https://liqhb2ueq2.execute-api.ap-northeast-1.amazonaws.com/prod/"
   }
 }

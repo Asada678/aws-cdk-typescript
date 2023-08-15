@@ -8,9 +8,9 @@ const awsRegion = "ap-northeast-1";
 Amplify.configure({
   Auth: {
     region: awsRegion,
-    userPoolId: "ap-northeast-1_YObRNjDL5",
-    userPoolWebClientId: "24flj2h28bqc59v1a7pvqtes2e",
-    identityPoolId: "ap-northeast-1:48bf9444-f203-43df-a7e4-fe3752207a02",
+    userPoolId: "ap-northeast-1_K2BGlMI3s",
+    userPoolWebClientId: "1f7mgjl5a7h8vj8pdtkemc7pv7",
+    identityPoolId: "ap-northeast-1:52210c31-fd9a-4531-a800-627344aa1af7",
     authenticationFlowType: "USER_PASSWORD_AUTH",
   },
 });
